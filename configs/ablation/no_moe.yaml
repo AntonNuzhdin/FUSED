@@ -1,0 +1,8 @@
+# @package _global_
+# w/o MoE (dense FFN): the sparse mixture is replaced by a single SwiGLU
+#
+#   uv run torchrun --standalone --nproc_per_node=2 train.py \
+#       ablation=no_moe trainer.out_dir=runs/no_moe
+
+model:
+  ffn_type: dense

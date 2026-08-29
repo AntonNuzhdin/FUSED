@@ -1,0 +1,12 @@
+# Weights & Biases logging (rank-0 only). Disabled by default:
+#   uv run torchrun ... train.py wandb.mode=online     # live logging
+#   uv run torchrun ... train.py wandb.mode=offline    # log locally, sync later
+mode: disabled          # online | offline | disabled
+project: fused
+entity: null            # wandb team/user; null = default entity
+name: null              # run name; null -> the out_dir name
+group: null             # optional run group, e.g. an ablation sweep id
+tags: []
+notes: null
+watch_model: false      # wandb.watch() grad/param histograms (expensive)
+watch_log_freq: 200

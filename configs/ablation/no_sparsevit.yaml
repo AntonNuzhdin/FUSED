@@ -1,0 +1,9 @@
+# @package _global_
+# w/o SparseViT: the trainable forensic branch is removed and the mask is decoded
+# from the semantic stream alone.
+#
+#   uv run torchrun --standalone --nproc_per_node=2 train.py \
+#       ablation=no_sparsevit trainer.out_dir=runs/no_sparsevit
+
+model:
+  enable_sparsevit_branch: false

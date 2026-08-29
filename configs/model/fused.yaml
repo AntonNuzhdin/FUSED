@@ -1,0 +1,44 @@
+# FUSED model configuration (the reference row of Table 5).
+#
+# Instantiating this loads the frozen CLIP-ConvNeXt semantic branch via timm
+# (pretrained=True), which downloads to the HF cache on first use.
+#
+# Ablation switches (Table 5), overridden on the command line:
+#   ffn_type=dense                 w/o MoE (dense FFN)
+#   seg_bridge=false               w/o seg-bridge
+#   enable_convnext_branch=false   w/o ConvNeXt
+#   enable_sparsevit_branch=false  w/o SparseViT
+#   convnext_model=...             ConvNeXt-Large / ConvNeXt-Base
+#   moe_top_k=1 | 3                routing sparsity
+_target_: fused.model.model.FUSED
+
+num_classes: 2
+dim: 512
+num_latents: 8
+num_heads: 8
+
+# Sparse MoE fusion.
+moe_num_experts: 8
+moe_top_k: 2
+moe_expansion: 4
+ffn_type: moe
+
+# Joint forensic-semantic mask decoder.
+seg_bridge: true
+
+# Branches.
+enable_sparsevit_branch: true
+enable_convnext_branch: true
+convnext_model: convnext_xxlarge.clip_laion2b_soup
+
+# SparseViT forensic backbone.
+depth: [5, 8, 20, 7]
+embed_dim: [64, 128, 320, 512]
+head_dim: 64
+img_size: 512
+s_blocks3: [8, 4, 2, 1]
+s_blocks4: [2, 1]
+mlp_ratio: 4
+qkv_bias: true
+drop_path_rate: 0.2
+pretrained_path: null

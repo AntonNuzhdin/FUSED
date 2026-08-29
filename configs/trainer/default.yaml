@@ -1,0 +1,26 @@
+# Training hyperparameters. The effective batch size is
+# batch_size x nproc_per_node x accum = 32 x 2 x 1 = 64.
+epochs: 20
+batch_size: 32
+lr: 3.0e-4
+accum: 1
+weight_decay: 0.0
+num_workers: 8
+seed: 42
+log_every: 50
+
+# Loss weights of Eq. (5).
+lambda_seg: 1.0
+lambda_edge: 0.5
+lambda_cls: 1.0
+lambda_moe: 0.01
+lambda_div: 0.01
+
+# Weights used to initialize the forensic backbone.
+checkpoint: weights/sparsevit_pretrained.pth
+
+# Where checkpoints and logs are written.
+out_dir: ???
+
+# Warm-resume from a checkpoint (weights + epoch counter; optimizer restarts).
+resume: null

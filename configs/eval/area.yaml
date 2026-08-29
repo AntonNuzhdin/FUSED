@@ -1,0 +1,13 @@
+# Localization and detection stratified by edit size (Appendix D).
+#   uv run python eval/area_stratified.py checkpoint=weights/fused_opensdi.pth
+defaults:
+  - base
+  - _self_
+
+test_json: data/opensdi/test.json
+out_dir: results/area
+
+plot: true
+plot_only: false
+baseline_json: null
+baseline_label: baseline

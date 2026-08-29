@@ -1,0 +1,9 @@
+# Zero-shot transfer to the paired INP-X benchmark
+#   uv run python eval/inpx_test.py checkpoint=weights/fused_opensdi.pth
+defaults:
+  - base
+  - _self_
+
+data_root: data/INP-X
+batch_size: 16
+out: results/inpx_test.json

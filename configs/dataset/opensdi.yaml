@@ -1,0 +1,14 @@
+# OpenSDID SD1.5 training split.
+#
+# A manifest is a JSON list of [image_path, mask_path_or_null, subset] rows; see
+# the README for the expected layout.
+name: opensdi
+
+train:
+  _target_: fused.data.opensdi.OpenSDIDataset
+  manifest_path: data/opensdi/train.json
+  augment: false
+val:
+  _target_: fused.data.opensdi.OpenSDIDataset
+  manifest_path: data/opensdi/val.json
+  augment: false

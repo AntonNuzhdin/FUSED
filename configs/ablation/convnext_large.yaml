@@ -1,0 +1,8 @@
+# @package _global_
+# Semantic backbone capacity: ConvNeXt-Large in place of ConvNeXt-XXL.
+#
+#   uv run torchrun --standalone --nproc_per_node=2 train.py \
+#       ablation=convnext_large trainer.out_dir=runs/convnext_large
+
+model:
+  convnext_model: convnext_large_mlp.clip_laion2b_augreg

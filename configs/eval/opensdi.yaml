@@ -1,0 +1,8 @@
+# OpenSDID test generators: localization and detection
+#   uv run python eval/opensdi.py checkpoint=weights/fused_opensdi.pth
+defaults:
+  - base
+  - _self_
+
+test_json: data/opensdi/test.json
+out: results/opensdi.json

@@ -1,0 +1,9 @@
+# @package _global_
+# w/o ConvNeXt: the frozen semantic branch is removed and the model runs on the
+# forensic stream alone.
+#
+#   uv run torchrun --standalone --nproc_per_node=2 train.py \
+#       ablation=no_convnext trainer.out_dir=runs/no_convnext
+
+model:
+  enable_convnext_branch: false

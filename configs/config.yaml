@@ -1,0 +1,15 @@
+defaults:
+  - model: fused
+  - dataset: opensdi
+  - trainer: default
+  - wandb: default
+  - ablation: fused
+  - _self_
+
+# Keep the working directory unchanged so relative paths behave predictably.
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+  job:
+    chdir: false

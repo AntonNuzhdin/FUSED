@@ -1,0 +1,8 @@
+# @package _global_
+# Routing sparsity: one active expert per token instead of two.
+#
+#   uv run torchrun --standalone --nproc_per_node=2 train.py \
+#       ablation=topk1 trainer.out_dir=runs/topk1
+
+model:
+  moe_top_k: 1

@@ -1,0 +1,10 @@
+# Zero-shot transfer to CocoGlide, which contains GLIDE inpaintings of COCO
+# crops (Table 3).
+#   uv run python eval/cocoglide.py checkpoint=weights/fused_opensdi.pth
+defaults:
+  - base
+  - _self_
+
+data_root: data/CocoGlide
+batch_size: 16
+out: results/cocoglide.json

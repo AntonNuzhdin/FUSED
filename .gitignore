@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Checkpoints / model weights
+weights/
+*.pth
+*.pt
+*.ckpt
+
+# Datasets and manifests
+data/
+
+# Run outputs and results
+runs/
+results/
+inference_out/
+outputs/
+*.log
+
+# W&B run artifacts (anchored so configs/wandb/ stays tracked)
+/wandb/
+
+# OS
+.DS_Store

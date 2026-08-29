@@ -1,0 +1,8 @@
+# @package _global_
+# w/o seg-bridge: the mask is decoded from the forensic stream alone
+#
+#   uv run torchrun --standalone --nproc_per_node=2 train.py \
+#       ablation=no_seg_bridge trainer.out_dir=runs/no_seg_bridge
+
+model:
+  seg_bridge: false

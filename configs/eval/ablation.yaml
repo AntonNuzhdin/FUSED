@@ -1,0 +1,26 @@
+defaults:
+  - base
+  - _self_
+
+checkpoint: null          # unused here; the per-arm result files are read instead
+results_dir: results/ablation
+
+arms:
+  - name: fused
+    label: FUSED (ours)
+  - name: no_moe
+    label: w/o MoE (dense FFN)
+  - name: no_seg_bridge
+    label: w/o seg-bridge
+  - name: no_convnext
+    label: w/o ConvNeXt
+  - name: no_sparsevit
+    label: w/o SparseViT
+  - name: convnext_large
+    label: ConvNeXt-Large
+  - name: convnext_base
+    label: ConvNeXt-Base
+  - name: topk1
+    label: MoE top-k=1
+  - name: topk3
+    label: MoE top-k=3

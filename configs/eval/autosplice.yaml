@@ -1,0 +1,11 @@
+# Zero-shot transfer to AutoSplice, which contains local edits produced by
+# DALL-E 2 (Table 3).
+#   uv run python eval/autosplice.py checkpoint=weights/fused_opensdi.pth
+defaults:
+  - base
+  - _self_
+
+data_root: data/AutoSplice
+forged_dir: Forged_JPEG100
+batch_size: 16
+out: results/autosplice.json

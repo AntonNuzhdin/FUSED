@@ -1,0 +1,15 @@
+# Localization robustness to Gaussian blur and JPEG compression
+#   uv run python eval/robustness.py checkpoint=weights/fused_opensdi.pth
+
+defaults:
+  - base
+  - _self_
+
+test_json: data/opensdi/test.json
+generators: [sd15, sd3]
+out_dir: results/robustness
+
+plot: true
+plot_only: false
+baseline_json: null
+baseline_label: baseline

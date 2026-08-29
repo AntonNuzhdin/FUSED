@@ -1,0 +1,16 @@
+# Config for inference.py (a single image or a folder).
+#   uv run python inference.py checkpoint=weights/fused_opensdi.pth input=image.jpg
+checkpoint: ???
+input: ???
+out_dir: inference_out
+threshold: 0.5
+
+# See configs/eval/base.yaml: rebuild the architecture stored in the checkpoint.
+model_from_checkpoint: true
+
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+  job:
+    chdir: false

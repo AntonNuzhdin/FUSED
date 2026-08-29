@@ -1,0 +1,20 @@
+# Settings shared by every eval entrypoint.
+
+# Checkpoint to evaluate.
+checkpoint: ???
+
+# Checkpoints store the model config they were trained with, so a single
+# checkpoint= is enough to rebuild the matching architecture for each ablation
+# arm. Set this to false to always build configs/model/fused.yaml instead.
+model_from_checkpoint: true
+
+batch_size: 32
+num_workers: 8
+
+# Keep the working directory unchanged and do not create per-run output folders.
+hydra:
+  run:
+    dir: .
+  output_subdir: null
+  job:
+    chdir: false

@@ -1,0 +1,6 @@
+# @package _global_
+# Reference row of Table 5: E=8 experts, top-k=2, CLIP-ConvNeXt-XXL semantic
+# branch. Selected by default, so it applies no overrides of its own.
+#
+#   uv run torchrun --standalone --nproc_per_node=2 train.py \
+#       trainer.out_dir=runs/fused
