@@ -2,12 +2,13 @@
 
 # FUSED: Forensic–Semantic Mixture-of-Experts for AI Inpainting Detection and Localization
 
-**Anton Nuzhdin, Marcel Worring, Ivona Najdenkoska**
+**[Anton Nuzhdin](https://scholar.google.com/citations?user=MfkaQdMAAAAJ&hl=en) ·
+[Marcel Worring](https://staff.fnwi.uva.nl/m.worring/) ·
+[Ivona Najdenkoska](https://ivonajdenkoska.github.io/)**
 
 Informatics Institute, University of Amsterdam
 
-<!-- TODO: replace ARXIV_ID in the badge, the link below, and the BibTeX entry once the preprint is live. -->
-[![arXiv](https://img.shields.io/badge/arXiv-ARXIV__ID-b31b1b.svg)](https://arxiv.org/abs/ARXIV_ID)
+[![arXiv](https://img.shields.io/badge/arXiv-2608.28302-b31b1b.svg)](https://arxiv.org/abs/2608.28302)
 [![Hugging Face](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Checkpoints-ffd21e.svg)](https://huggingface.co/aonuzhdin/FUSED)
 [![Python 3.10+](https://img.shields.io/badge/python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.9-ee4c2c.svg)](https://pytorch.org/)
@@ -231,14 +232,17 @@ inference.py            single image or folder inference
 
 ## Citation
 
-<!-- TODO: fill in ARXIV_ID and the year once the preprint is announced. -->
+If you find FUSED useful in your research, please consider citing:
 
 ```bibtex
-@article{nuzhdin2026fused,
-  title   = {FUSED: Forensic--Semantic Mixture-of-Experts for AI Inpainting Detection and Localization},
-  author  = {Nuzhdin, Anton and Worring, Marcel and Najdenkoska, Ivona},
-  journal = {arXiv preprint arXiv:ARXIV_ID},
-  year    = {2026}
+@misc{nuzhdin2026fused,
+      title         = {FUSED: Forensic-Semantic Mixture-of-Experts for AI Inpainting Detection and Localization}, 
+      author        = {Anton Nuzhdin and Marcel Worring and Ivona Najdenkoska},
+      year          = {2026},
+      eprint        = {2608.28302},
+      archivePrefix = {arXiv},
+      primaryClass  = {cs.CV},
+      url           = {https://arxiv.org/abs/2608.28302}, 
 }
 ```
 
